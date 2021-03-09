@@ -6,16 +6,6 @@ use std::{cmp::Ordering, fs};
 const TEST_FILE_PATH: &str = "/Users/abdelhamid/Documents/GitHub/rust/eip-utils/basefee-test.json";
 
 fn main() {
-    /*let parent_base_fee: u64 = 1000000000;
-    let parent_gas_used: u64 = 7000000;
-    let parent_target_gas_used: u64 = 6000000;
-    let parent_base_fee = BigUint::from(parent_base_fee);
-    let parent_gas_used = BigUint::from(parent_gas_used);
-    let parent_target_gas_used = BigUint::from(parent_target_gas_used);
-    let base_fee =
-        eip1559::compute_base_fee(&parent_base_fee, &parent_gas_used, &parent_target_gas_used);
-    println!("base fee: {}", &base_fee);*/
-
     let data = fs::read_to_string(TEST_FILE_PATH);
     let data = match data {
         Ok(c) => c,
@@ -40,9 +30,13 @@ fn main() {
 
 #[derive(Debug, Serialize, Deserialize)]
 struct TestCase {
+    #[serde(rename = "parentBaseFee")]
     parent_base_fee: u64,
+    #[serde(rename = "parentGasUsed")]
     parent_gas_used: u64,
+    #[serde(rename = "parentTargetGasUsed")]
     parent_target_gas_used: u64,
+    #[serde(rename = "expectedBaseFee")]
     expected_base_fee: u64,
 }
 
