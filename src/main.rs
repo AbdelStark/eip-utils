@@ -28,7 +28,7 @@ fn eip1559_compute_base_fee(matches: &ArgMatches) {
     println!("{}", base_fee);
 }
 
-fn tx_encode(matches: &ArgMatches){
+fn tx_encode(matches: &ArgMatches) {
     println!("encode tx");
     // https://crates.io/crates/rlp
     // https://github.com/rust-blockchain/ethereum
