@@ -1,0 +1,26 @@
+name: eip-utils
+version: "0.1.2"
+author: Abdelhamid Bakhta <abdelhamid.bakhta@consensys.net>
+about: Ethereum Improvement Proposal helpers.
+args:
+subcommands:
+    - eip1559-compute-basefee:
+        about: Compute base fee from parent block header
+        version: "0.1.0"
+        author: Abdelhamid Bakhta <abdelhamid.bakhta@consensys.net>
+        args:
+            - parent-base-fee: 
+                long: parent-base-fee           
+                about: The value of the parent block base fee
+                required: true
+                takes_value: true
+            - parent-gas-used:
+                long: parent-gas-used
+                about: The value of the parent block gas used
+                required: true
+                takes_value: true
+            - parent-target-gas-used: 
+                long: parent-target-gas-used
+                about: The value of the parent block target gas used
+                required: true
+                takes_value: true          
