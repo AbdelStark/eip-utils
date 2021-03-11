@@ -40,8 +40,7 @@ FLAGS:
 OPTIONS:
         --parent-base-fee <parent-base-fee>                  The value of the parent block base fee
         --parent-gas-used <parent-gas-used>                  The value of the parent block gas used
-        --parent-target-gas-used <parent-target-gas-used>
-            The value of the parent block target gas used
+        --parent-target-gas-used <parent-target-gas-used>    The value of the parent block target gas used
 ```
 
 ```console
