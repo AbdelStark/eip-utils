@@ -11,6 +11,11 @@ fn main() {
         eip1559_compute_base_fee(&matches);
         exit(0);
     }
+    if let Some(ref matches) = matches.subcommand_matches("tx-encode") {
+        // "$ eip-utils eip1559-compute-basefee" was run
+        tx_encode(&matches);
+        exit(0);
+    }
     println!("{}", BANNER);
 }
 
@@ -21,6 +26,12 @@ fn eip1559_compute_base_fee(matches: &ArgMatches) {
     let base_fee =
         eip1559::compute_base_fee(&parent_base_fee, &parent_gas_used, &parent_target_gas_used);
     println!("{}", base_fee);
+}
+
+fn tx_encode(matches: &ArgMatches){
+    println!("encode tx");
+    // https://crates.io/crates/rlp
+    // https://github.com/rust-blockchain/ethereum
 }
 
 fn option_to_big(value: Option<&str>) -> BigUint {

@@ -23,4 +23,8 @@ subcommands:
                 long: parent-target-gas-used
                 about: The value of the parent block target gas used
                 required: true
-                takes_value: true          
+                takes_value: true
+    - tx-encode:
+        about: Encode transaction using RLP encoding
+        version: "0.1.0"
+        author: Abdelhamid Bakhta <abdelhamid.bakhta@consensys.net>                          
