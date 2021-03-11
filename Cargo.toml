@@ -1,6 +1,6 @@
 [package]
 name = "eip-utils"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Abdelhamid Bakhta <abdelhamid.bakhta@consensys.net>"]
 edition = "2018"
 description = "Ethereum Improvement Proposal helpers."
