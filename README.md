@@ -34,6 +34,14 @@ USAGE:
     eip-utils eip1559-resources
 
 ```
+
+```console
+# Example 
+eip-utils eip1559-resources
+# Output
+https://hackmd.io/@timbeiko/1559-resources
+```
+
 ##### eip1559-compute-basefee
 
 ```
