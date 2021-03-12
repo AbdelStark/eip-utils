@@ -24,6 +24,8 @@ subcommands:
                 about: The value of the parent block target gas used
                 required: true
                 takes_value: true
+    - eip1559-resources:
+        about: Print link to extensive list of EIP-1559 resources            
     - tx-encode:
         about: Encode transaction using RLP encoding
         version: "0.1.0"
