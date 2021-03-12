@@ -25,6 +25,15 @@ eip-utils --help
 
 #### EIP-1559
 
+##### eip1559-resources
+
+```
+Print link to extensive list of EIP-1559 resources
+
+USAGE:
+    eip-utils eip1559-resources
+
+```
 ##### eip1559-compute-basefee
 
 ```
@@ -32,10 +41,6 @@ Compute base fee from parent block header
 
 USAGE:
     eip-utils eip1559-compute-basefee --parent-base-fee <parent-base-fee> --parent-gas-used <parent-gas-used> --parent-target-gas-used <parent-target-gas-used>
-
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
 
 OPTIONS:
         --parent-base-fee <parent-base-fee>                  The value of the parent block base fee
